@@ -1,0 +1,57 @@
+﻿@model Rumuel_Store_ASPN_CursoMod129.Models.Product
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<h1>Create</h1>
+
+<h4>Product</h4>
+
+<br />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="">
+                <label asp-for="Description" class="col-form-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+
+            </div>
+            <div class="">
+                <label asp-for="Price" class="col-form-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+
+            </div>
+
+            <div class="">
+                <label asp-for="Stock" class="col-form-label"></label>
+                <input asp-for="Stock" class="form-control" />
+                <span asp-validation-for="Stock" class="text-danger"></span>
+
+            </div>
+
+            <div class="">
+                <label asp-for="Weight" class="col-form-label"></label>
+                <input asp-for="Weight" class="form-control" />
+                <span asp-validation-for="Weight" class="text-danger"></span>
+
+            </div>
+
+            <div class="">
+                <label asp-for="CategoryID" class="col-form-label"></label>
+                <select asp-for="CategoryID" class="form-control" asp-items="@ViewBag.CategoryID "></select>
+                <span asp-validation-for="CategoryID" class="text-danger"></span>
+
+            </div>
+        </form>
+
+    </div>
+
+</div>
+
+
+@{
+}

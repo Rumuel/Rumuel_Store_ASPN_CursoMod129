@@ -9,7 +9,7 @@ namespace Rumuel_Store_ASPN_CursoMod129.Models
 
         [StringLength(100)]
         [Required]
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
         [Required]
         public decimal Price { get; set; }

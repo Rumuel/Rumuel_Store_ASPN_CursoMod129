@@ -12,6 +12,6 @@ namespace Rumuel_Store_ASPN_CursoMod129.Models
 
         [StringLength(255)]
         [Required]
-        public string Description { get; set; } 
+        public string? Description { get; set; } 
     }
 }
