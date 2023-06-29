@@ -13,7 +13,7 @@ namespace Rumuel_Store_ASPN_CursoMod129.Models
 
         [Required]
         public decimal Price { get; set; }
-
+        [Display(Name = "Stock Quantity")]
         [Required]
         public decimal Stock { get; set; }
 
