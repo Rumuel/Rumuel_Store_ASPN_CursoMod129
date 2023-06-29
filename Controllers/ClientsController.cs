@@ -5,11 +5,11 @@ using Rumuel_Store_ASPN_CursoMod129.Models;
 
 namespace Rumuel_Store_ASPN_CursoMod129.Controllers
 {
-    public class CategoriesController : Controller
+    public class ClientsController : Controller
     {
         public readonly ApplicationDbContext _context;
 
-        public CategoriesController(ApplicationDbContext context)
+        public ClientsController(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -19,22 +19,22 @@ namespace Rumuel_Store_ASPN_CursoMod129.Controllers
             return View();
         }
 
-        public IActionResult Create() 
+        public IActionResult Create()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult Create(Category newCategory)
+        public IActionResult Create(Client newClient)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(newCategory);
+                _context.Add(newClient);
                 _context.SaveChanges();
 
                 return RedirectToAction("Index");
             }
-            return View(newCategory);
+            return View(newClient);
         }
     }
 }

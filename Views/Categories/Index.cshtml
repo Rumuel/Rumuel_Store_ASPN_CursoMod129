@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Category>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">["Create New"]</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Name)</th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            
+
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (Category ct in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => ct.Name)</td>
+                <td>@Html.DisplayFor(modelItem => ct.Description)</td>
+           
+            </tr>
+        }
+    </tbody>
+
+</table>

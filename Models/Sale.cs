@@ -39,11 +39,13 @@ namespace Rumuel_Store_ASPN_CursoMod129.Models
 
         public decimal value { get; set; }
 
-        [Required]
-        [Display(Name = "Status")]
-        public int StatusID { get; set; }
+        //[Required]
+        //[Display(Name = "Status")]
+        //public int StatusID { get; set; }
 
-        [ValidateNever]
-        public Status? Status { get; set; }
+        //[ValidateNever]
+        //public Status? Status { get; set; }
+
+        public StatusList? status { get; set; }
     }
 }

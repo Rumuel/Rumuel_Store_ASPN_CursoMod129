@@ -34,5 +34,10 @@ namespace Rumuel_Store_ASPN_CursoMod129.Models
         [StringLength(255)]
         [Display(Name = "Client Number")]
         public string Number { get; set; }
+
+        [StringLength(255)]
+        [Display(Name = "E-mail")]
+        [Required]
+        public string Email { get; set; }
     }
 }

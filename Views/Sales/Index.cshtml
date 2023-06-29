@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Sale>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">["Create New"]</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Number)</th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>@Html.DisplayNameFor(model => model.ClientID)</th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductID)
+            </th>
+            <th>@Html.DisplayNameFor(model => model.Comments)</th>
+            </th>
+            <th>@Html.DisplayNameFor(model => model.StatusID)</th>
+            <th>Paga</th>
+            
+
+
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (Sale sl in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => sl.Number)</td>
+                <td>@Html.DisplayFor(modelItem => sl.Date)</td>
+                <td>@Html.DisplayFor(modelItem => sl.ClientID)</td>
+                <td>@Html.DisplayFor(modelItem => sl.ProductID)</td>
+                <td>@Html.DisplayFor(modelItem => sl.Comments)</td>
+                <td>@Html.DisplayFor(modelItem => sl.StatusID)</td>
+                @if(sl.StatusID == 3)
+                {
+                    <td>Sim</td>
+                }
+                <td>Não</td>
+      
+            </tr>
+        }
+    </tbody>
+
+</table>
